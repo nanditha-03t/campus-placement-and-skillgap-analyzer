@@ -1,0 +1,16 @@
+{
+  "name": "campus-placement-and-skillgap-analyzer",
+  "version": "1.0.0",
+  "description": "Full-stack MERN Campus Placement & Skill Gap Analyzer with predictive readiness scoring and TPO analytics",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "start": "cd server && npm start",
+    "build": "cd client && npm run build",
+    "seed": "cd server && node -e \"require('./config/db').connectDB().then(() => require('./seed/seedData')()).then(() => process.exit(0))\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
